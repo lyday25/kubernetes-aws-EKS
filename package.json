@@ -1,0 +1,15 @@
+{
+  "name": "kubernetes-aws-eks",
+  "version": "1.0.0",
+  "description": "This is a project that will showcase the installation of kubernetes, a cloud managed service called awsEKS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}

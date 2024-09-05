@@ -1,3 +1,17 @@
+node -v
+npm init -y
+npm install express
+node .
+
+## check if the app is working locally on the browser
+localhost:3000
+
+## authentication to aws
+aws configure
+aws sts get-caller-identity
+
+
+
 ## INSTALLATION OF KUBERNETES AWS EKS 
 
 1. first install the aws cli on an EC2 instance
@@ -49,10 +63,27 @@ eksctl get cluster --name eks-cluster-201 --region eu-north-1
 ## Get EKS Pod data.
 kubectl get pods --all-namespaces
 
+## To update kubernetes config file
+aws eks update-kubeconfig --name eks-cluster-201
+
+kubectl get nodes
+
+kubectl apply -f deployment.yaml
+
+kubectl get pods
+
+kubectl describe pod nginx-deployment-77d8468669-dd9d4
+
+kubectl get svcsx
+
+kubectl delete svc nodejs-app1
+
+kubectl delete -f deployment.yaml
+
+kubectl get pods
+
 7. ## Delete EKS cluster
 eksctl delete cluster --name eks-cluster-201 --region eu-north-1
 ##or 
 eksctl delete cluster --region=eu-north-1 --name=eks-cluster-201
-
-
 
